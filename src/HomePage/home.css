@@ -1,0 +1,45 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/iteration-1-images/home-banner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.home-text{
+    font-family: "Roboto Condensed";
+    color: white;
+    font-weight: 300;
+    font-size: 86px;
+    line-height: 92px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    vertical-align: middle;
+    text-wrap: wrap;
+}
+.home-logo {
+    padding-top: 10vh;
+}
+.btn{
+    color: black;
+    font-family: "Barlow";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0%;
+    line-height: 56px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: yellow;
+    width: 193.27px;
+    height: 56px;
+    border-radius: 50px;
+
+}
