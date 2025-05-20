@@ -1,6 +1,118 @@
 .order-container{
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    height: auto;
     background-color: white;
+    color: black;
+    
 }
-.order-logo {
+
+.order-banner{
     background-color: #CE2829;
+    width: 1920px;
+    height: 207px;
+}
+.banner-logo{
+    margin-top: 66.49px;
+    margin-left: 780.21px;
+}
+
+.breadcrumb {
+    margin-top: 30px;
+    margin-left: 694px;
+    color: white;
+    text-decoration: none;
+}
+.order-form{
+    width: 532px;
+    height: 1341px;
+    margin-top: 5px;
+    margin-left: 694px;
+    display: flex;
+    flex-direction: column;
+
+}
+.order-info{
+    display: flex;
+    flex-direction: column;
+}
+.price-score-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.order-name{
+    font-family: 'Barlow';
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29.44px;
+}
+.order-price{
+    font-family: 'Barlow';
+    font-size: 28px;
+    font-weight: 700;
+}
+.order-score{
+    font-family: 'Barlow';
+    font-size: 16px;
+    font-weight: 400;
+}
+.order-text{
+    font-family: 'Barlow';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #5F5F5F;
+}
+.size-border-choice{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 428px;
+    height: 156px;
+}
+.size-choice{
+    display: flex;
+    flex-direction: column;
+    width: 147px;
+    height: 155px;
+}
+.size-choice p {
+    font-family: 'Barlow';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.76px;
+    
+}
+.size-choice input{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow';
+    font-size: 16px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+.border-choice{
+    display: flex;
+    flex-direction: column;
+    width: 159px;
+    height: 75px;
+    margin-left: 268.88px;
+    font-family: 'Barlow';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.76px;
+}
+.add-item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.extra-items{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 0.5rem;
 }
