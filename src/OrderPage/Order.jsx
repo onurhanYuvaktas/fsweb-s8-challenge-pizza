@@ -58,7 +58,7 @@ export default function Order() {
         <BreadCrumb />
       </div>
 
-      <form className="order-form">
+      <form className="order-form" onSubmit={handleSubmit}>
       
         <div className="order-info">
           <h1 className="order-name">Position Absolute Acı Pizza</h1>
@@ -77,23 +77,24 @@ export default function Order() {
             <div className="size-border-choice">
               <div className="size-choice">
                 <p>Boyut Seç</p>
-                  {["Küçük", "Orta", "Büyük"].map((b) => (
-                    <label key={b}>
-                     <input
-                        type="radio"
-                        name="boyut"
-                        value={b}
-                        checked={boyut === b}
-                        onChange={(e) => setBoyut(e.target.value)}
-                    />
-                    {b}
-                    </label>
-                  ))}
+                {["Küçük", "Orta", "Büyük"].map((b, index) => (
+                <label key={b}>
+                  <input
+                    type="radio"
+                    name="boyut"
+                    value={b}
+                    checked={boyut === b}
+                    onChange={(e) => setBoyut(e.target.value)}
+                    required={index === 0}
+                  />
+                  {b}
+                </label>
+              ))}
               </div>
               <div className="border-choice">
                   <label>
                   Hamur Seç:
-                  <select value={hamur} onChange={(e) => setHamur(e.target.value)}>
+                  <select required value={hamur} onChange={(e) => setHamur(e.target.value)}>
                     <option value="">Hamur Kalınlığı</option>
                     <option value="ince">İnce</option>
                     <option value="normal">Normal</option>
@@ -105,38 +106,45 @@ export default function Order() {
             </div>
             <div className="add-item">
               
-              <div className="extra-items">
+              <div className="extra-items-text">
                 <h3>Ek Malzemeler</h3>
+                <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+                
+              </div>
+              <div className="extra-items">
                 {secimler.map((malzeme) => (
                 <EkMalzemelerCheckBox key={malzeme.id} {...malzeme} toggle={toggleCheckbox} />
                 ))}
               </div>
               <div className="order-note">
-                <label>
-                Sipariş Notu:
-                  <input
+                <label htmlFor="not">
+                  Sipariş Notu:
+                </label >
+                <input
+                    id="not"
                     type="text"
                     placeholder="Siparişine eklemek istediğin bir not var mı?"
                     value={not}
                     onChange={(e) => setNot(e.target.value)}
                   />
-                </label>
               </div>
             </div>  
                     
+            <div className="pcs-price">
+              <div className="pcs-control">
+                <button className="left-button" type="button" onClick={() => setAdet(adet > 1 ? adet - 1 : 1)}>-</button>
+                <div className="pcs"><span>{adet}</span></div>
+                <button className="right-button"type="button" onClick={() => setAdet(adet + 1)}>+</button>
+              </div>
 
-            <div className="adet-kontrol">
-              <button type="button" onClick={() => setAdet(adet > 1 ? adet - 1 : 1)}>-</button>
-              <span>{adet}</span>
-              <button type="button" onClick={() => setAdet(adet + 1)}>+</button>
+              <div className="price-area">
+                <h3>SİPARİŞ TOPLAMI</h3>
+                <p>Seçimler: {ekstraFiyat.toFixed(2)}₺</p>
+                <p>Toplam: {toplam.toFixed(2)}₺</p>
+                <button type="submit" className="submit-btn">SİPARİŞ VER</button>
+              </div>
+
             </div>
-
-            <div className="fiyat-alani">
-              <p>Seçimler: {ekstraFiyat.toFixed(2)}₺</p>
-              <p>Toplam: {toplam.toFixed(2)}₺</p>
-            </div>
-
-            <button type="submit" className="submit-btn">SİPARİŞ VER</button>
           </div>
         </div>
 
