@@ -54,7 +54,7 @@ export default function Order() {
     <div className="order-container">
       
       <div className="order-banner">
-        <img className="banner-logo" src="/images/iteration-1-images/logo.svg" alt="banner-logo" />
+        <img className="banner-logo" src="/logo.svg" alt="banner-logo" />
         <BreadCrumb />
       </div>
 
