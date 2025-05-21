@@ -1,0 +1,51 @@
+h1 {
+    width: 361.93px;
+    height: 45.79px;
+    margin-top: 50px;
+}
+
+.home-text {
+    font-weight: 100;
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 693.1170043945312;
+    height: 195;
+    top: 85.79px;
+    left: 99.44px;
+    color: white;    
+}
+
+.btn {
+    width: 193.265625;
+    height: 56;
+    border-radius: 50px;
+    background: #FDC913;
+    padding: 10px 50px;
+}
+
+.home-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/iteration-1-images/home-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: white;
+}
+
+.home-logo {
+    padding-top: 10vh;
+}
